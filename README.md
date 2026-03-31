@@ -42,7 +42,7 @@ Generate (sample) some text from a trained model with:
     ./scripts/generate.sh
 
 ---
-## NLP Assignment Update: Custom Language Model Training
+## exercise1 NLP Assignment Update: Custom Language Model Training
 
 ### Project Overview
 I trained a recurrent neural network (LSTM) language model on a custom Chinese dataset: **"The Three-Body Problem" (三体)**.
@@ -58,3 +58,5 @@ I trained a recurrent neural network (LSTM) language model on a custom Chinese d
 ### Findings
 - **Final Test Perplexity**: 273.95 (Significant improvement compared to 361.62 at Epoch 5).
 - **Generation Sample**: The model successfully captured keywords like "智子" (Sophon) and "维度" (Dimension), though global sentence logic remains a challenge for a model of this size.
+- ##exercise2
+- Evaluated dropout rates (0, 0.2, 0.5). Found 0.2 produced the lowest Test PPL (361.62).
