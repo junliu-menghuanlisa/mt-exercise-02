@@ -41,4 +41,20 @@ Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
 
+---
+## NLP Assignment Update: Custom Language Model Training
 
+### Project Overview
+I trained a recurrent neural network (LSTM) language model on a custom Chinese dataset: **"The Three-Body Problem" (三体)**.
+
+### Key Changes & Methodology
+- **Custom Tokenization**: Since Chinese doesn't use spaces, I used the `jieba` library to segment the text.
+- **Dataset Segmentation**: Split the novel into `train.txt`, `valid.txt`, and `test.txt` (80/10/10 ratio).
+- **Model Training**: 
+  - Architecture: 2-layer LSTM
+  - Epochs: 40
+  - Hyperparameters: emsize=200, nhid=200, dropout=0.5.
+
+### Findings
+- **Final Test Perplexity**: 273.95 (Significant improvement compared to 361.62 at Epoch 5).
+- **Generation Sample**: The model successfully captured keywords like "智子" (Sophon) and "维度" (Dimension), though global sentence logic remains a challenge for a model of this size.
