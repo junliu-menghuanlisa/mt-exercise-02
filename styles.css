@@ -638,6 +638,13 @@ li + li {
   color: var(--navy);
 }
 
+.forensic-caution {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15.4pt;
+  line-height: 1.14;
+}
+
 .secondary-section {
   background: #fbfbf7;
   border-top-color: var(--border);
@@ -693,18 +700,25 @@ li + li {
   line-height: 1;
 }
 
-.references ol {
+.references ol,
+.reference-list {
   column-count: 2;
   column-gap: 7mm;
   padding-left: 5mm;
   margin: 0;
 }
 
-.references li {
+.references li,
+.reference-item {
   break-inside: avoid;
   margin-bottom: 1mm;
   font-size: 12.6pt;
   line-height: 1.12;
+}
+
+.reference-item {
+  padding-left: 4mm;
+  text-indent: -4mm;
 }
 
 .contact-panel {
