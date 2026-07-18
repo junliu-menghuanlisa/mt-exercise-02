@@ -10,58 +10,39 @@
   <button class="print-button screen-only" type="button" onclick="window.print()">Print / Save as PDF</button>
 
   <main class="poster" aria-label="A0 academic conference poster">
-    <header class="poster-header header-grid">
-      <div class="logo-box uzh-logo">
-        <!-- Intended final HTML:
-        <img
-          src="assets/uzh-logo.svg"
-          alt="University of Zurich"
-          class="institution-logo"
-        />
-        -->
-        <!-- Replace this placeholder with the official University of Zurich logo.
-        Suggested local path: assets/uzh-logo.svg or assets/uzh-logo.png
-        Preserve the original aspect ratio and do not crop the logo. -->
-        <span class="logo-placeholder">University of Zurich<br>logo placeholder</span>
-      </div>
-
-      <div class="title-block">
-        <h1>AI-ccent Judgements:<br>Accent Stereotypes Persist with AI-Generated Voices</h1>
-        <p class="author">Jun Liu</p>
-        <p class="affiliation">Department of Computational Linguistics<br>University of Zurich</p>
-        <p class="author-email"><a href="mailto:jun.liu@uzh.ch">jun.liu@uzh.ch</a></p>
-        <p class="conference-line">IAFPA Conference 2026 · 26–29 July · Trier, Germany</p>
-        <p class="conference-secondary">International Association for Forensic Phonetics and Acoustics</p>
-      </div>
-
-      <div class="logo-box iafpa-logo">
-        <!-- Intended final HTML:
-        <img
-          src="assets/iafpa-2026-logo.svg"
-          alt="IAFPA Conference 2026"
-          class="conference-logo"
-        />
-        -->
-        <!-- Replace this placeholder with the official IAFPA 2026 logo.
-        Suggested local path: assets/iafpa-2026-logo.svg or assets/iafpa-2026-logo.png
-        Do not create or approximate a conference logo if no official logo is available. -->
-        <span class="logo-placeholder">IAFPA 2026<br>logo placeholder</span>
-      </div>
+    <header class="poster-header">
+      <h1>AI-ccent Judgements:<br>Accent Stereotypes Persist with AI-Generated Voices</h1>
+      <p class="header-meta">Jun Liu <span>|</span> University of Zurich <span>|</span> IAFPA 2026</p>
+      <p class="header-submeta">Department of Computational Linguistics <span>|</span> <a href="mailto:jun.liu@uzh.ch">jun.liu@uzh.ch</a></p>
     </header>
 
-    <section class="main-grid" aria-label="Poster content">
+    <section class="takeaway-banner" aria-label="Main takeaway">
+      <svg class="takeaway-icon" viewBox="0 0 64 64" role="img" aria-label="Sound wave icon">
+        <path d="M10 27h10l13-12v34L20 37H10z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M42 23c3 5 3 13 0 18M50 17c6 9 6 21 0 30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <p>Listeners evaluate AI-generated voices not only through acoustic realism, but also through sociolinguistic meanings attached to accent.</p>
+    </section>
+
+    <section class="main-grid" aria-label="Poster main content">
       <div class="column column-left">
-        <section class="poster-section">
-          <h2>Background</h2>
-          <p>AI-generated voices are increasingly realistic, but they are not necessarily perceived as socially neutral. In human speech, listeners use accent to infer identity, credibility, competence, and social character. Accent stereotypes may also shape listeners’ judgements of social traits and behaviour in forensic contexts (Paver et al., 2025). Meanwhile, the growing realism of synthetic speech creates challenges involving deception, fraud, impersonation, and audio-deepfake detection (Almutairi &amp; Elgibreen, 2022).</p>
-          <div class="callout gap-callout">
-            <h3>Research gap</h3>
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">1</span>
+            <h2>Background</h2>
+          </div>
+          <p>AI-generated voices are increasingly realistic but are not necessarily perceived as socially neutral. Listeners use accent to infer identity, credibility, competence, and social character. Accent stereotypes may also shape judgements of speaker traits and behaviour in forensic contexts (Paver et al., 2025), while increasingly realistic synthetic speech creates challenges involving deception, fraud, impersonation, and audio-deepfake detection (Almutairi &amp; Elgibreen, 2022).</p>
+          <div class="gap-box">
+            <h3>Research Gap</h3>
             <p>Little is known about how accent, voice gender, and listener background jointly shape social evaluations of voices that listeners know are AI-generated.</p>
           </div>
         </section>
 
-        <section class="poster-section">
-          <h2>Research Questions</h2>
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">?</span>
+            <h2>Research Questions</h2>
+          </div>
           <ol class="rq-list">
             <li><strong>RQ1 — Accent Type</strong><br>Do standard and regional AI-generated accents differ in perceived trustworthiness, professionalism, and human-likeness?</li>
             <li><strong>RQ2 — Voice Gender</strong><br>Does perceived voice gender influence these evaluations?</li>
@@ -69,337 +50,74 @@
           </ol>
         </section>
 
-        <section class="poster-section methods-section">
-          <h2>Experimental Design</h2>
-          <p>The study used a mixed experimental design.</p>
-          <div class="factor-grid">
-            <div>
-              <h3>Within-participant factors</h3>
-              <ul>
-                <li>Accent type: standard vs. regional</li>
-                <li>Accent nationality: British vs. American</li>
-                <li>Perceived voice gender: female vs. male</li>
-              </ul>
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">2</span>
+            <h2>Method</h2>
+          </div>
+          <div class="method-flow">
+            <div class="flow-box flow-blue">
+              <h3>Stimuli</h3>
+              <p>16 ElevenLabs-generated voices<br>64 audio clips<br>4 accent varieties</p>
+              <p><strong>Accent type:</strong> Standard / Regional<br><strong>Accent nationality:</strong> British / American<br><strong>Perceived voice gender:</strong> Female / Male</p>
             </div>
-            <div>
-              <h3>Between-participant factor</h3>
-              <ul>
-                <li>Listener nationality: British vs. American</li>
-              </ul>
-              <h3>Primary dependent variables</h3>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-box flow-teal">
+              <h3>Participants</h3>
+              <p>40 native English-speaking listeners</p>
+              <p>20 British<br>20 American</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-box flow-lavender">
+              <h3>Rating Task</h3>
+              <p>All participants rated all 64 clips in individually randomised order.</p>
+              <p><strong>Four 6-point scales:</strong></p>
               <ul>
                 <li>Trustworthiness</li>
                 <li>Professionalism</li>
                 <li>Human-likeness</li>
+                <li>Perceived audio naturalness</li>
               </ul>
             </div>
+            <div class="flow-arrow" aria-hidden="true"></div>
+            <div class="flow-box flow-amber">
+              <h3>Dataset</h3>
+              <p class="dataset-number">40 participants × 64 clips<br>= 2,560 observations</p>
+            </div>
           </div>
-          <h3>Accent design</h3>
-          <table class="methods-table">
-            <thead>
-              <tr>
-                <th>Accent nationality</th>
-                <th>Standard</th>
-                <th>Regional</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>British</td>
-                <td>Received Pronunciation</td>
-                <td>Yorkshire</td>
-              </tr>
-              <tr>
-                <td>American</td>
-                <td>General American</td>
-                <td>Southern American</td>
-              </tr>
-            </tbody>
-          </table>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">β</span>
+            <h2>Statistical Analysis</h2>
+          </div>
+          <h3>Beta mixed-effects regression</h3>
+          <ul class="compact-list">
+            <li>Ratings rescaled to the open interval (0,1)</li>
+            <li>Fixed effects: accent type, voice gender, listener nationality, accent nationality, and listener nationality × accent nationality</li>
+            <li>Crossed random intercepts: participant and audio file</li>
+            <li>Estimates reported on the logit scale</li>
+          </ul>
           <h3>Supplementary analyses</h3>
-          <ul>
-            <li>Self-reported AI exposure: robustness-check predictor</li>
+          <ul class="compact-list">
+            <li>Self-reported AI exposure: robustness check</li>
             <li>Perceived audio naturalness: supplementary perceptual predictor</li>
           </ul>
         </section>
-
-        <section class="poster-section">
-          <h2>Participants and Stimuli</h2>
-          <div class="number-grid">
-            <div class="number-card"><span>40</span><p>native English-speaking listeners</p></div>
-            <div class="number-card"><span>20 + 20</span><p>British and American listeners</p></div>
-            <div class="number-card"><span>16</span><p>unique ElevenLabs voices</p></div>
-            <div class="number-card"><span>64</span><p>audio clips rated by all participants</p></div>
-          </div>
-          <div class="split-list">
-            <div>
-              <h3>Participants</h3>
-              <ul>
-                <li>Age range: 21–40 years</li>
-                <li>Mean age: 31.80 years</li>
-                <li>All reported normal hearing</li>
-                <li>All passed headphone and attention checks</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Stimuli</h3>
-              <ul>
-                <li>4 accent varieties</li>
-                <li>2 female and 2 male voices per accent variety</li>
-                <li>4 utterances per voice</li>
-                <li>Individually randomised presentation order</li>
-              </ul>
-            </div>
-          </div>
-          <div class="dataset-callout">40 participants × 64 clips = <strong>2,560 observations</strong></div>
-          <h3>Audio information</h3>
-          <ul class="compact-list">
-            <li>Generated using ElevenLabs</li>
-            <li>44.1 kHz sampling rate; 128 kbps</li>
-            <li>Normalised to −23 LUFS</li>
-            <li>Same verbal materials across voice conditions</li>
-          </ul>
-        </section>
-
-        <section class="poster-section">
-          <h2>Procedure</h2>
-          <div class="procedure">
-            <div><span>1</span><p>Consent and demographics</p></div>
-            <div><span>2</span><p>Sound check and headphone screening</p></div>
-            <div><span>3</span><p>64 individually randomised AI-voice clips</p></div>
-            <div><span>4</span><p>Four 6-point ratings per clip</p></div>
-            <div><span>5</span><p>Open-ended cue reports</p></div>
-          </div>
-          <p class="caption"><strong>Ratings:</strong> Trustworthiness, professionalism, human-likeness, and perceived audio naturalness.</p>
-        </section>
-
-        <section class="poster-section">
-          <h2>Statistical Analysis: Beta Mixed-Effects Regression</h2>
-          <p>Ratings were rescaled from the original 1–6 scale to the open interval (0,1) and analysed using beta mixed-effects regression. Estimates are reported on the logit scale.</p>
-          <div class="analysis-grid">
-            <div>
-              <h3>Main-model fixed effects</h3>
-              <ul>
-                <li>Accent type</li>
-                <li>Voice gender</li>
-                <li>Listener nationality</li>
-                <li>Accent nationality</li>
-                <li>Listener nationality × Accent nationality</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Crossed random intercepts</h3>
-              <ul>
-                <li>Participant</li>
-                <li>Audio file</li>
-              </ul>
-            </div>
-          </div>
-          <h3>Supplementary models</h3>
-          <ul>
-            <li>Self-reported AI exposure was added as a robustness check.</li>
-            <li>Standardised perceived audio naturalness was added in a separate supplementary analysis.</li>
-            <li>The main-model predictors and random-effects structure were retained.</li>
-          </ul>
-          <p class="note">Beta mixed-effects regression accommodated bounded ratings while accounting for repeated observations across listeners and audio stimuli.</p>
-        </section>
       </div>
 
-      <div class="column column-middle results-column">
-        <section class="poster-section result-section">
-          <p class="kicker">Key Finding 1 — Accent Type</p>
-          <h2>Regional accents sounded more trustworthy and more human-like.</h2>
-          <table class="stat-table">
-            <thead>
-              <tr>
-                <th>Outcome</th>
-                <th>Regional − Standard</th>
-                <th>p</th>
-                <th>Interpretation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Trustworthiness</td>
-                <td>b = 0.217</td>
-                <td>.009</td>
-                <td>Regional advantage</td>
-              </tr>
-              <tr>
-                <td>Professionalism</td>
-                <td>b = −0.058</td>
-                <td>.460</td>
-                <td>No reliable difference</td>
-              </tr>
-              <tr>
-                <td>Human-likeness</td>
-                <td>b = 0.474</td>
-                <td>&lt; .001</td>
-                <td>Regional advantage</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Accent effects were dimension-specific: regionality increased trustworthiness and human-likeness, but did not significantly predict professionalism.</p>
-          <figure class="figure-placeholder figure-large">
-            <!-- REPLACE FIGURE 1 HERE: insert final SVG or PNG for model-estimated ratings by accent type. -->
-            <div>
-              <strong>FIGURE 1</strong>
-              <span>Model-estimated trustworthiness, professionalism, and human-likeness by accent type</span>
-            </div>
-          </figure>
-        </section>
-
-        <section class="poster-section result-section">
-          <h2>Accent-variety Results</h2>
-          <p class="caption">Estimated marginal means on the original 1–6 scale.</p>
-          <table class="stat-table variety-table">
-            <thead>
-              <tr>
-                <th>Accent variety</th>
-                <th>Trustworthiness</th>
-                <th>Professionalism</th>
-                <th>Human-likeness</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>General American</td>
-                <td>3.83</td>
-                <td>4.21</td>
-                <td>3.46</td>
-              </tr>
-              <tr>
-                <td>Southern American</td>
-                <td>4.28</td>
-                <td>4.38</td>
-                <td>4.32</td>
-              </tr>
-              <tr>
-                <td>Received Pronunciation</td>
-                <td>4.43</td>
-                <td>4.73</td>
-                <td>4.25</td>
-              </tr>
-              <tr>
-                <td>Yorkshire</td>
-                <td>4.49</td>
-                <td>4.46</td>
-                <td>4.50</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="observation-list">
-            <li>Received Pronunciation had the highest estimated professionalism rating.</li>
-            <li>Yorkshire had the highest estimated human-likeness rating.</li>
-            <li>General American had the lowest estimated rating across all three dimensions.</li>
-          </ul>
-          <p class="caution">Descriptive differences should not automatically be interpreted as statistically significant pairwise contrasts.</p>
-          <figure class="figure-placeholder figure-medium">
-            <!-- REPLACE FIGURE 2 HERE: insert final SVG or PNG for estimated ratings across four accent varieties. -->
-            <div>
-              <strong>FIGURE 2</strong>
-              <span>Estimated ratings across the four accent varieties</span>
-            </div>
-          </figure>
-        </section>
-
-        <section class="poster-section result-section compact-result">
-          <p class="kicker">Key Finding 2 — Voice Gender</p>
-          <h2>No reliable voice-gender effect</h2>
-          <table class="stat-table">
-            <thead>
-              <tr>
-                <th>Outcome</th>
-                <th>Female − Male</th>
-                <th>p</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Trustworthiness</td>
-                <td>b = −0.019</td>
-                <td>.815</td>
-              </tr>
-              <tr>
-                <td>Professionalism</td>
-                <td>b = −0.106</td>
-                <td>.177</td>
-              </tr>
-              <tr>
-                <td>Human-likeness</td>
-                <td>b = 0.060</td>
-                <td>.622</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Voice gender did not significantly predict any of the three outcomes in the main models, suggesting that it was a comparatively weak cue in this disembodied AI-voice context.</p>
-        </section>
-      </div>
-
-      <div class="column column-right results-column">
-        <section class="poster-section result-section hero-result">
-          <p class="kicker">Key Finding 3 — Listener and Accent Nationality</p>
-          <h2>British-accented voices showed a broader evaluative advantage.</h2>
-          <p class="contrast-label">Contrasts: British-accented − American-accented voices</p>
-          <table class="stat-table interaction-table">
-            <thead>
-              <tr>
-                <th>Outcome</th>
-                <th>British listeners</th>
-                <th>American listeners</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Trustworthiness</td>
-                <td>b = 0.395, p &lt; .001</td>
-                <td>b = 0.310, p &lt; .001</td>
-              </tr>
-              <tr>
-                <td>Professionalism</td>
-                <td>b = 0.232, p = .009</td>
-                <td>b = 0.331, p &lt; .001</td>
-              </tr>
-              <tr>
-                <td>Human-likeness</td>
-                <td>b = 0.639, p &lt; .001</td>
-                <td>b = 0.182, p = .160</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="interaction-callout">
-            <h3>Interaction results</h3>
-            <ul>
-              <li>Trustworthiness interaction: p = .314</li>
-              <li>Professionalism interaction: p = .243</li>
-              <li>Human-likeness interaction: b = −0.114, p &lt; .001</li>
-            </ul>
+      <div class="column column-centre">
+        <section class="results-panel">
+          <div class="results-header">
+            <span class="section-marker marker-light">3</span>
+            <h2>Key Findings</h2>
           </div>
-          <p>Both British and American listeners rated British-accented voices as more trustworthy and professional than American-accented voices. The findings therefore did not support a symmetrical own-accent preference.</p>
-          <p>For human-likeness, British listeners preferred British-accented voices, whereas American listeners showed no corresponding American-accent advantage.</p>
-          <figure class="figure-placeholder figure-large">
-            <!-- REPLACE FIGURE 3 HERE: insert final SVG or PNG for listener nationality by accent nationality. -->
-            <div>
-              <strong>FIGURE 3</strong>
-              <span>Listener nationality × accent nationality, with emphasis on the significant human-likeness interaction</span>
-            </div>
-          </figure>
-        </section>
 
-        <section class="poster-section">
-          <h2>Supplementary Analyses</h2>
-          <div class="subsection">
-            <h3>A. AI Exposure Robustness Check</h3>
-            <p>Self-reported AI exposure was added as a robustness-check predictor to test whether the main findings remained stable after accounting for participants’ prior exposure to AI.</p>
-            <p class="editable-placeholder">
-              <!-- REPLACE VERIFIED AI-EXPOSURE COEFFICIENTS AND P-VALUES HERE. -->
-              [INSERT VERIFIED AI-EXPOSURE COEFFICIENTS AND P-VALUES FROM THE THESIS]
-            </p>
-          </div>
-          <div class="subsection">
-            <h3>B. Perceived Audio Naturalness</h3>
-            <p class="subheading-line">Perceived audio naturalness positively predicted all three outcomes.</p>
-            <table class="stat-table naturalness-table">
+          <section class="finding finding-large">
+            <h3><span>1</span> Accent Type Effect</h3>
+            <p class="finding-conclusion">Regional accents were rated significantly higher than standard accents for trustworthiness and human-likeness, but not professionalism.</p>
+            <table class="stat-table">
               <thead>
                 <tr>
                   <th>Outcome</th>
@@ -410,90 +128,235 @@
               <tbody>
                 <tr>
                   <td>Trustworthiness</td>
-                  <td>b = 1.037</td>
-                  <td>&lt; .001</td>
+                  <td>b = 0.217</td>
+                  <td>.009</td>
                 </tr>
                 <tr>
                   <td>Professionalism</td>
-                  <td>b = 0.776</td>
-                  <td>&lt; .001</td>
+                  <td>b = −0.058</td>
+                  <td>.460</td>
                 </tr>
                 <tr>
                   <td>Human-likeness</td>
-                  <td>b = 1.578</td>
+                  <td>b = 0.474</td>
                   <td>&lt; .001</td>
                 </tr>
               </tbody>
             </table>
-            <p>The strongest association was observed for human-likeness. Because perceived audio naturalness was measured rather than experimentally manipulated, these results should be interpreted as associations rather than causal effects.</p>
-            <p class="mini-takeaway">AI-voice evaluation reflects both sociolinguistic meaning and perceived audio quality.</p>
+            <figure class="figure-placeholder figure-primary">
+              <!-- Replace with verified thesis chart image if available. Do not insert illustrative bars or unverified uncertainty intervals. -->
+              <div>
+                <strong>FIGURE 1</strong>
+                <span>Model-estimated ratings by accent type<br>Rating (1–6)</span>
+              </div>
+            </figure>
+            <p class="result-callout blue-callout">Regional accents showed advantages in trustworthiness and human-likeness.</p>
+          </section>
+
+          <section class="finding finding-large">
+            <h3><span>2</span> Accent Nationality Effect</h3>
+            <p class="finding-conclusion">British-accented voices were rated as more trustworthy and professional by both British and American listeners.</p>
+            <div class="simple-effects-grid">
+              <div>
+                <h4>Trustworthiness</h4>
+                <p>British listeners: b = 0.395, p &lt; .001<br>American listeners: b = 0.310, p &lt; .001</p>
+              </div>
+              <div>
+                <h4>Professionalism</h4>
+                <p>British listeners: b = 0.232, p = .009<br>American listeners: b = 0.331, p &lt; .001</p>
+              </div>
+              <div>
+                <h4>Human-likeness</h4>
+                <p>British listeners: b = 0.639, p &lt; .001<br>American listeners: b = 0.182, p = .160</p>
+              </div>
+            </div>
+            <p class="interaction-note">The listener nationality × accent nationality interaction was significant only for human-likeness: b = −0.114, p &lt; .001.</p>
+            <figure class="figure-placeholder figure-secondary">
+              <!-- Replace with verified thesis chart image if available. Do not insert illustrative bars or unverified uncertainty intervals. -->
+              <div>
+                <strong>FIGURE 2</strong>
+                <span>Listener nationality × accent nationality<br>Rating (1–6)</span>
+              </div>
+            </figure>
+            <p class="result-callout teal-callout">The results did not support a symmetrical own-accent preference.</p>
+          </section>
+
+          <section class="finding compact-finding">
+            <h3><span>3</span> Voice Gender Effect</h3>
+            <p class="finding-conclusion">Voice gender did not significantly predict any of the three outcomes in the main models.</p>
+            <div class="mini-stat-grid">
+              <p><strong>Trustworthiness:</strong> b = −0.019, p = .815</p>
+              <p><strong>Professionalism:</strong> b = −0.106, p = .177</p>
+              <p><strong>Human-likeness:</strong> b = 0.060, p = .622</p>
+            </div>
+            <p class="result-callout lavender-callout">Voice gender was a comparatively weak evaluative cue in this disembodied AI-voice context.</p>
+          </section>
+
+          <section class="finding compact-finding">
+            <h3>Supplementary Analyses</h3>
+            <div class="supplement-grid">
+              <div>
+                <h4>A. AI Exposure</h4>
+                <p>Self-reported AI exposure was included as a robustness-check predictor.</p>
+                <p class="editable-placeholder">[INSERT VERIFIED AI-EXPOSURE COEFFICIENTS AND P-VALUES FROM THE THESIS]</p>
+              </div>
+              <div>
+                <h4>B. Perceived Audio Naturalness</h4>
+                <p>Trustworthiness: b = 1.037, p &lt; .001<br>Professionalism: b = 0.776, p &lt; .001<br>Human-likeness: b = 1.578, p &lt; .001</p>
+                <p>Perceived audio naturalness positively predicted all three outcomes, most strongly human-likeness.</p>
+              </div>
+            </div>
+            <p class="caution">Perceived audio naturalness was measured rather than experimentally manipulated; these relationships are associative, not causal.</p>
+          </section>
+
+          <section class="finding compact-finding variety-strip">
+            <h3>Accent Varieties: Estimated Ratings on the Original 1–6 Scale</h3>
+            <table class="stat-table small-table">
+              <thead>
+                <tr>
+                  <th>Accent variety</th>
+                  <th>Trust</th>
+                  <th>Prof.</th>
+                  <th>Human-like</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>General American</td><td>3.83</td><td>4.21</td><td>3.46</td></tr>
+                <tr><td>Southern American</td><td>4.28</td><td>4.38</td><td>4.32</td></tr>
+                <tr><td>Received Pronunciation</td><td>4.43</td><td>4.73</td><td>4.25</td></tr>
+                <tr><td>Yorkshire</td><td>4.49</td><td>4.46</td><td>4.50</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="overall-pattern">
+            <h3>Overall Pattern</h3>
+            <p>Accent was a stronger evaluative cue than voice gender, while perceived audio naturalness was strongly associated with all three social evaluations.</p>
+          </section>
+        </section>
+      </div>
+
+      <div class="column column-right">
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">4</span>
+            <h2>Discussion</h2>
           </div>
+          <p>Synthetic voices were not evaluated as socially neutral. Accent continued to carry social meaning even when listeners knew that the voices were artificially generated.</p>
+          <p>The effects were dimension-specific: no single voice profile simultaneously optimised trustworthiness, professionalism, and human-likeness.</p>
+          <p>Human-likeness was particularly sensitive to accent type, listener background, and perceived audio naturalness.</p>
         </section>
 
-        <section class="poster-section discussion-section">
-          <h2>Discussion and Implications</h2>
-          <ul>
-            <li>Synthetic voices carry sociolinguistic meaning: listeners responded to accent-based social cues even when they knew the voices were AI-generated.</li>
-            <li>Evaluation is multidimensional: the same voice profile did not optimise trustworthiness, professionalism, and human-likeness simultaneously.</li>
-            <li>Standard does not necessarily mean superior: regional voices were perceived as more trustworthy and human-like.</li>
-            <li>Listener background matters, particularly for perceived human-likeness.</li>
-            <li>AI voice selection and localisation should be empirically tested with intended listener groups.</li>
-          </ul>
-          <h3>Forensic Relevance</h3>
-          <p>Accent stereotypes can influence listeners’ perceptions of speaker traits and behaviour in forensic contexts (Paver et al., 2025). At the same time, increasingly realistic synthetic voices present challenges for detecting impersonation and audio deepfakes (Almutairi &amp; Elgibreen, 2022). The present findings suggest that judgements of synthetic-voice authenticity and credibility may reflect sociolinguistic expectations as well as acoustic quality.</p>
-          <p class="forensic-caution">The present experiment examined social evaluations of AI-generated voices; it did not directly test forensic evidence evaluation or legal decision-making.</p>
-        </section>
-
-        <section class="poster-section secondary-section">
-          <h2>Limitations</h2>
-          <ul class="limitation-list">
-            <li>Modest sample: 20 British and 20 American listeners</li>
-            <li>All voices came from one TTS platform</li>
-            <li>Accent and voice gender may have been partly confounded with voice-specific acoustic properties</li>
-            <li>Isolated clips were evaluated without an interactive or forensic context</li>
-            <li>Each evaluative construct was measured with a single 6-point item</li>
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">5</span>
+            <h2>Implications</h2>
+          </div>
+          <ul class="compact-list">
+            <li>Standard accents should not automatically be treated as neutral or superior defaults.</li>
+            <li>AI voice selection should be tested with intended listener groups.</li>
+            <li>Voice localisation cannot rely only on matching accent nationality to listener nationality.</li>
+            <li>AI voice technologies may reproduce existing sociolinguistic hierarchies.</li>
+            <li>Evaluation frameworks should distinguish trustworthiness, professionalism, human-likeness, and perceived audio naturalness.</li>
           </ul>
         </section>
 
-        <section class="poster-section conclusion-section">
-          <h2>Conclusion</h2>
-          <p>AI-generated voices are not socially neutral. Regional accents were perceived as more trustworthy and human-like, while British-accented voices received broader advantages in trustworthiness and professionalism. AI-voice evaluation is shaped by sociolinguistic meaning, listener background, and perceived audio naturalness.</p>
+        <section class="section-block">
+          <div class="section-heading">
+            <span class="section-marker">6</span>
+            <h2>Forensic Relevance</h2>
+          </div>
+          <p>Accent stereotypes can affect perceptions of speaker traits and behaviour in forensic contexts (Paver et al., 2025). Increasingly realistic synthetic voices also create challenges for detecting impersonation and audio deepfakes (Almutairi &amp; Elgibreen, 2022).</p>
+          <p>The present findings suggest that judgements of synthetic-voice authenticity and credibility may reflect sociolinguistic expectations as well as perceived audio quality.</p>
+          <p class="caution">This study did not directly test forensic evidence evaluation or legal decision-making.</p>
+        </section>
+
+        <section class="section-block secondary-section">
+          <div class="section-heading">
+            <span class="section-marker">!</span>
+            <h2>Limitations</h2>
+          </div>
+          <ul class="compact-list">
+            <li>Modest listener sample: 20 British and 20 American participants</li>
+            <li>Voices generated using one TTS platform</li>
+            <li>Possible confounding with voice-specific acoustic properties</li>
+            <li>Single-item 6-point measures</li>
+            <li>Isolated clips rather than interactive or forensic contexts</li>
+          </ul>
+        </section>
+
+        <section class="conclusion-box">
+          <div class="section-heading">
+            <span class="section-marker">✓</span>
+            <h2>Conclusion</h2>
+          </div>
+          <p>AI-generated voices are evaluated through both acoustic and social perception. Accent remains a powerful cue in how listeners judge synthetic speech.</p>
+          <p class="principal-takeaway">Accent stereotypes persist—even when the voice is artificial.</p>
+        </section>
+
+        <section class="section-block compact-meta">
+          <div class="section-heading">
+            <span class="section-marker">#</span>
+            <h2>Keywords</h2>
+          </div>
+          <p>AI-generated speech; accent perception; sociolinguistics; synthetic voices; human-likeness; forensic phonetics</p>
         </section>
       </div>
     </section>
 
-    <footer class="poster-footer">
-      <div class="takeaway-banner">ACCENT STEREOTYPES PERSIST — EVEN WHEN THE VOICE IS ARTIFICIAL.</div>
-      <div class="footer-grid">
-        <section class="references">
+    <section class="references-contact" aria-label="References and contact">
+      <section class="references">
+        <div class="section-heading compact-heading">
+          <span class="section-marker">R</span>
           <h2>References</h2>
-          <div class="references-list">
-            <p class="reference-item">Almutairi, M., &amp; Elgibreen, H. (2022). A review of modern audio deepfake detection methods: Challenges and future directions. <em>Applied Sciences, 12</em>(7), 3241.</p>
-            <p class="reference-item">Baird, A., Parada-Cabaleiro, E., Hantke, S., Burkhardt, F., Cummins, N., &amp; Schuller, B. (2018). The perception and analysis of the likeability and human likeness of synthesized speech. In <em>Proceedings of Interspeech 2018</em> (pp. 2863–2867).</p>
-            <p class="reference-item">Baus, C., Belin, P., &amp; Balaguer-Ballester, E. (2019). The social voice space: Sociality and familiarity dimensions in voice perception. <em>PLOS ONE, 14</em>(1), e0209951.</p>
-            <p class="reference-item">Coupland, N., &amp; Bishop, H. (2007). Ideologised values for British accents. <em>Journal of Sociolinguistics, 11</em>(1), 74–93.</p>
-            <p class="reference-item">Garrett, P., Coupland, N., &amp; Williams, A. (2003). <em>Investigating language attitudes: Social meanings of dialect, ethnicity and performance</em>. University of Wales Press.</p>
-            <p class="reference-item">Kühne, K., Fischer, M. H., &amp; Zhou, Y. (2020). The human takes it all: Humanlike synthesized voices are perceived as less eerie and more likable—Evidence from a subjective ratings study. <em>Frontiers in Neurorobotics, 14</em>, 593732.</p>
-            <p class="reference-item">McAleer, P., Todorov, A., &amp; Belin, P. (2014). How do you say “hello”? Personality impressions from brief novel voices. <em>PLOS ONE, 9</em>(3), e90779.</p>
-            <p class="reference-item">Nussbaum, C., Frühholz, S., &amp; Schweinberger, S. R. (2025). Understanding voice naturalness. <em>Trends in Cognitive Sciences, 29</em>(5), 467–480.</p>
-            <p class="reference-item">Paver, A., Wright, D., Braber, N., &amp; Pautz, N. (2025). Stereotyped accent judgements in forensic contexts: Listener perceptions of social traits and types of behaviour. <em>Frontiers in Communication, 9</em>, 1462013.</p>
-            <p class="reference-item">Schreibelmayr, S., &amp; Mara, M. (2022). Robot voices in daily life: Acceptance factors and human-likeness. <em>Frontiers in Robotics and AI</em>.</p>
+        </div>
+        <div class="references-list">
+          <p class="reference-item">Almutairi, M., &amp; Elgibreen, H. (2022). A review of modern audio deepfake detection methods: Challenges and future directions. <em>Applied Sciences, 12</em>(7), 3241.</p>
+          <p class="reference-item">Baird, A., Parada-Cabaleiro, E., Hantke, S., Burkhardt, F., Cummins, N., &amp; Schuller, B. (2018). The perception and analysis of the likeability and human likeness of synthesized speech. In <em>Proceedings of Interspeech 2018</em> (pp. 2863–2867).</p>
+          <p class="reference-item">Baus, C., Belin, P., &amp; Balaguer-Ballester, E. (2019). The social voice space: Sociality and familiarity dimensions in voice perception. <em>PLOS ONE, 14</em>(1), e0209951.</p>
+          <p class="reference-item">Coupland, N., &amp; Bishop, H. (2007). Ideologised values for British accents. <em>Journal of Sociolinguistics, 11</em>(1), 74–93.</p>
+          <p class="reference-item">Garrett, P., Coupland, N., &amp; Williams, A. (2003). <em>Investigating language attitudes: Social meanings of dialect, ethnicity and performance</em>. University of Wales Press.</p>
+          <p class="reference-item">Kühne, K., Fischer, M. H., &amp; Zhou, Y. (2020). The human takes it all: Humanlike synthesized voices are perceived as less eerie and more likable—Evidence from a subjective ratings study. <em>Frontiers in Neurorobotics, 14</em>, 593732.</p>
+          <p class="reference-item">McAleer, P., Todorov, A., &amp; Belin, P. (2014). How do you say “hello”? Personality impressions from brief novel voices. <em>PLOS ONE, 9</em>(3), e90779.</p>
+          <p class="reference-item">Nussbaum, C., Frühholz, S., &amp; Schweinberger, S. R. (2025). Understanding voice naturalness. <em>Trends in Cognitive Sciences, 29</em>(5), 467–480.</p>
+          <p class="reference-item">Paver, A., Wright, D., Braber, N., &amp; Pautz, N. (2025). Stereotyped accent judgements in forensic contexts: Listener perceptions of social traits and types of behaviour. <em>Frontiers in Communication, 9</em>, 1462013.</p>
+          <p class="reference-item">Schreibelmayr, S., &amp; Mara, M. (2022). Robot voices in daily life: Acceptance factors and human-likeness. <em>Frontiers in Robotics and AI</em>.</p>
+        </div>
+      </section>
+
+      <section class="contact-card">
+        <div class="section-heading compact-heading">
+          <span class="section-marker">@</span>
+          <h2>Contact / QR Code</h2>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p><strong>Jun Liu</strong><br>Department of Computational Linguistics<br>University of Zurich<br><a href="mailto:jun.liu@uzh.ch">jun.liu@uzh.ch</a></p>
+            <p><strong>Acknowledgements:</strong><br>Supervision by Prof. Dr. Eleanor Chodroff and Dr. Leah Bradshaw.</p>
           </div>
-        </section>
-        <section class="contact-panel">
           <div class="qr-placeholder">
             <!-- REPLACE QR CODE HERE: insert an <img> with alt="QR code for thesis, poster, and study materials". -->
             <span>QR code<br>placeholder</span>
           </div>
-          <div>
-            <h2>Contact and Materials</h2>
-            <p>Scan to access the thesis, poster, and study materials</p>
-            <p class="contact-name">Jun Liu</p>
-            <p>Department of Computational Linguistics<br>University of Zurich<br><a href="mailto:jun.liu@uzh.ch">jun.liu@uzh.ch</a></p>
-            <p><strong>Acknowledgements:</strong><br>Supervision by Prof. Dr. Eleanor Chodroff and Dr. Leah Bradshaw.</p>
-          </div>
-        </section>
+        </div>
+        <p class="qr-caption">Scan to access the thesis, poster, and study materials</p>
+      </section>
+    </section>
+
+    <footer class="institutional-footer" aria-label="Institutional footer">
+      <div class="footer-logo-group">
+        <div class="footer-logo-box">
+          <!-- Replace with the official University of Zurich logo when available. Do not recreate the logo. -->
+          <span>University of Zurich<br>logo placeholder</span>
+        </div>
+        <p>University of Zurich</p>
       </div>
+      <div class="footer-conference">
+        <p><strong>IAFPA 2026</strong><br>International Association for Forensic Phonetics and Acoustics</p>
+      </div>
+      <svg class="footer-waveform" viewBox="0 0 220 56" aria-label="Decorative waveform">
+        <path d="M4 28 C 18 8, 28 48, 42 28 S 66 8, 80 28 S 104 48, 118 28 S 142 8, 156 28 S 180 48, 194 28 S 210 18, 216 28" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      </svg>
     </footer>
   </main>
 </body>
