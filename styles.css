@@ -65,7 +65,7 @@ body {
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
   display: grid;
-  grid-template-rows: 118mm 1fr 105mm;
+  grid-template-rows: 132mm 1fr 91mm;
   gap: 8mm;
 }
 
@@ -74,28 +74,30 @@ body {
   color: #fff;
   border-bottom: 4mm solid var(--teal);
   display: grid;
-  grid-template-columns: 92mm 1fr 92mm;
-  gap: 14mm;
+  grid-template-columns: 22% 58% 20%;
+  gap: 0;
   align-items: center;
-  padding: 9mm 14mm;
+  padding: 6mm 14mm;
 }
 
 .title-block {
   text-align: center;
+  align-self: center;
 }
 
 .conference-line {
-  margin: 0 0 3mm;
-  font-size: 21pt;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #dbe9ef;
+  margin: 2.6mm 0 0.8mm;
+  font-size: 19pt;
+  letter-spacing: 0.01em;
+  color: #f0d7bd;
+  font-weight: 700;
 }
 
-.conference-placeholder {
-  margin: 0 0 5mm;
-  font-size: 18pt;
-  color: #f0d7bd;
+.conference-secondary {
+  margin: 0;
+  font-size: 15pt;
+  color: #dbe9ef;
+  letter-spacing: 0.015em;
 }
 
 h1,
@@ -109,47 +111,91 @@ figure {
 }
 
 h1 {
-  margin: 0 0 7mm;
-  font-size: 66pt;
-  line-height: 0.98;
+  margin: 0 0 3.5mm;
+  font-size: 62pt;
+  line-height: 0.94;
   letter-spacing: -0.035em;
   font-weight: 800;
 }
 
 .author {
-  margin: 0 0 2mm;
-  font-size: 34pt;
+  margin: 0 0 1.4mm;
+  font-size: 31pt;
   font-weight: 700;
 }
 
 .affiliation {
-  margin: 0 0 2mm;
-  font-size: 27pt;
+  margin: 0 0 1.3mm;
+  font-size: 22pt;
+  line-height: 1.04;
 }
 
-.email-placeholder {
+.author-email {
   margin: 0;
-  font-size: 20pt;
+  font-size: 18pt;
   color: #f0d7bd;
 }
 
-.logo-slot {
+.author-email a,
+.contact-panel a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.author-email a {
+  color: #f0d7bd;
+}
+
+.logo-box {
   min-height: 62mm;
-  border: 0.8mm solid rgba(255, 255, 255, 0.65);
+  max-height: 82mm;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.45mm dashed rgba(255, 255, 255, 0.62);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 7mm;
-  color: #eaf2f7;
-  font-size: 18pt;
+  padding: 8mm;
+  color: #dbe9ef;
+  font-size: 13pt;
   line-height: 1.2;
+  align-self: center;
 }
 
-.logo-slot img,
+.logo-placeholder {
+  display: block;
+  color: #dbe9ef;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo-box:has(img) {
+  border-color: transparent;
+  background: transparent;
+}
+
+.logo-box:has(img) .logo-placeholder {
+  display: none;
+}
+
+.institution-logo,
+.conference-logo {
+  display: block;
+  max-width: 100%;
+  max-height: 66mm;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 .qr-placeholder img {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -668,6 +714,11 @@ li + li {
   margin-bottom: 1.8mm;
 }
 
+.contact-name {
+  color: var(--navy);
+  font-weight: 800;
+}
+
 .qr-placeholder {
   width: 38mm;
   height: 38mm;
@@ -718,6 +769,12 @@ li + li {
     break-inside: avoid;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  .author-email a,
+  .contact-panel a {
+    color: inherit;
+    text-decoration: none;
   }
 
   .poster-header,

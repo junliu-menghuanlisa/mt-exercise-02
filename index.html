@@ -11,25 +11,41 @@
 
   <main class="poster" aria-label="A0 academic conference poster">
     <header class="poster-header">
-      <div class="logo-slot logo-slot-left">
-        <!-- REPLACE UNIVERSITY OF ZURICH LOGO HERE: insert an <img> with alt="University of Zurich logo". -->
-        <span>University of Zurich<br>logo placeholder</span>
+      <div class="logo-box uzh-logo">
+        <!-- Intended final HTML:
+        <img
+          src="assets/uzh-logo.svg"
+          alt="University of Zurich"
+          class="institution-logo"
+        />
+        -->
+        <!-- Replace this placeholder with the official University of Zurich logo.
+        Suggested local path: assets/uzh-logo.svg or assets/uzh-logo.png
+        Preserve the original aspect ratio and do not crop the logo. -->
+        <span class="logo-placeholder">University of Zurich<br>logo placeholder</span>
       </div>
 
       <div class="title-block">
-        <p class="conference-line">IAFPA 2026 · International Association for Forensic Phonetics and Acoustics</p>
-        <!-- REPLACE OPTIONAL CONFERENCE LOCATION/DATE HERE. -->
-        <p class="conference-placeholder">[Optional conference location/date]</p>
         <h1>AI-ccent Judgements:<br>Accent Stereotypes Persist with AI-Generated Voices</h1>
         <p class="author">Jun Liu</p>
-        <p class="affiliation">Department of Computational Linguistics, University of Zurich</p>
-        <!-- REPLACE AUTHOR EMAIL HERE. -->
-        <p class="email-placeholder">Author email: [INSERT AUTHOR EMAIL]</p>
+        <p class="affiliation">Department of Computational Linguistics<br>University of Zurich</p>
+        <p class="author-email"><a href="mailto:jun.liu@uzh.ch">jun.liu@uzh.ch</a></p>
+        <p class="conference-line">IAFPA Conference 2026 · 26–29 July · Trier, Germany</p>
+        <p class="conference-secondary">International Association for Forensic Phonetics and Acoustics</p>
       </div>
 
-      <div class="logo-slot logo-slot-right">
-        <!-- REPLACE IAFPA 2026 CONFERENCE LOGO HERE: insert an <img> with alt="IAFPA 2026 logo". -->
-        <span>IAFPA 2026<br>logo placeholder</span>
+      <div class="logo-box iafpa-logo">
+        <!-- Intended final HTML:
+        <img
+          src="assets/iafpa-2026-logo.svg"
+          alt="IAFPA Conference 2026"
+          class="conference-logo"
+        />
+        -->
+        <!-- Replace this placeholder with the official IAFPA 2026 logo.
+        Suggested local path: assets/iafpa-2026-logo.svg or assets/iafpa-2026-logo.png
+        Do not create or approximate a conference logo if no official logo is available. -->
+        <span class="logo-placeholder">IAFPA 2026<br>logo placeholder</span>
       </div>
     </header>
 
@@ -470,9 +486,8 @@
           <div>
             <h2>Contact and Materials</h2>
             <p>Scan to access the thesis, poster, and study materials</p>
-            <!-- REPLACE AUTHOR EMAIL HERE. -->
-            <p>Email: [INSERT AUTHOR EMAIL]</p>
-            <p>Thesis/project URL: [INSERT THESIS OR PROJECT URL]</p>
+            <p class="contact-name">Jun Liu</p>
+            <p>Department of Computational Linguistics<br>University of Zurich<br><a href="mailto:jun.liu@uzh.ch">jun.liu@uzh.ch</a></p>
             <p><strong>Acknowledgements:</strong><br>Supervision by Prof. Dr. Eleanor Chodroff and Dr. Leah Bradshaw.</p>
           </div>
         </section>
