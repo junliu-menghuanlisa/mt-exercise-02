@@ -65,7 +65,7 @@ body {
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
   display: grid;
-  grid-template-rows: 132mm 1fr 91mm;
+  grid-template-rows: 132mm 1fr 150mm;
   gap: 8mm;
 }
 
@@ -490,6 +490,18 @@ li + li {
   border-top-color: var(--amber);
 }
 
+.column-right {
+  gap: 3mm;
+}
+
+.column-right .poster-section {
+  padding: 3.8mm 4.2mm;
+}
+
+.column-right .figure-large {
+  aspect-ratio: 16 / 9;
+}
+
 .result-section {
   background: #fffaf3;
 }
@@ -679,8 +691,8 @@ li + li {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.45fr 1fr;
-  gap: 8mm;
+  grid-template-columns: 3fr 0.9fr;
+  gap: 6mm;
   min-height: 0;
 }
 
@@ -700,25 +712,22 @@ li + li {
   line-height: 1;
 }
 
-.references ol,
-.reference-list {
-  column-count: 2;
-  column-gap: 7mm;
-  padding-left: 5mm;
+.references-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
   margin: 0;
 }
 
-.references li,
 .reference-item {
+  margin: 0;
+  padding-left: 8mm;
+  text-indent: -8mm;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17pt;
+  line-height: 1.25;
   break-inside: avoid;
-  margin-bottom: 1mm;
-  font-size: 12.6pt;
-  line-height: 1.12;
-}
-
-.reference-item {
-  padding-left: 4mm;
-  text-indent: -4mm;
+  overflow-wrap: anywhere;
 }
 
 .contact-panel {
