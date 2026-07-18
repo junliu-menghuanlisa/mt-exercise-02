@@ -27,7 +27,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #d7dee8;
+  width: 841mm;
+  min-width: 841mm;
+  background: #dfe5eb;
   color: var(--text);
   font-family: Arial, Helvetica, "Liberation Sans", sans-serif;
 }
@@ -52,18 +54,21 @@ body {
 }
 
 .poster {
+  position: relative;
   width: 841mm;
   height: 1189mm;
-  margin: 18px auto;
-  padding: 25mm;
+  min-width: 841mm;
+  min-height: 1189mm;
+  margin: 0 auto;
+  padding: 24mm 26mm 0;
   box-sizing: border-box;
   overflow: hidden;
-  background: var(--paper);
+  background: #ffffff;
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
   display: grid;
-  grid-template-rows: 113mm 49mm 1fr 132mm 65mm;
-  gap: 6mm;
+  grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+  gap: 8mm;
 }
 
 .poster-header {
@@ -119,16 +124,27 @@ a {
   background: linear-gradient(90deg, var(--teal-dark), var(--teal));
   color: #fff;
   border-radius: 8mm;
-  display: grid;
-  grid-template-columns: 28mm 1fr;
+  display: flex;
   gap: 6mm;
   align-items: center;
   padding: 7mm 11mm;
 }
 
 .takeaway-icon {
-  width: 24mm;
-  height: 24mm;
+  flex: 0 0 22mm;
+  width: 22mm;
+  height: 22mm;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.takeaway-icon svg {
+  display: block;
+  width: 18mm !important;
+  height: 18mm !important;
+  max-width: 18mm !important;
+  max-height: 18mm !important;
 }
 
 .takeaway-banner p {
@@ -139,14 +155,16 @@ a {
 }
 
 .main-grid {
-  display: grid;
-  grid-template-columns: 25fr 47fr 28fr;
-  gap: 10mm;
   min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 25fr) minmax(0, 47fr) minmax(0, 28fr);
+  gap: 10mm;
+  align-items: start;
   overflow: hidden;
 }
 
 .column {
+  min-width: 0;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -191,19 +209,22 @@ a {
   border-bottom: 0.35mm solid var(--line);
 }
 
-.section-marker {
+.section-icon {
   flex: 0 0 auto;
-  width: 10mm;
-  height: 10mm;
+  width: 14mm;
+  height: 14mm;
   border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-grid;
+  place-items: center;
   background: var(--navy);
   color: #fff;
-  font-size: 15pt;
-  line-height: 1;
-  font-weight: 800;
+  overflow: hidden;
+}
+
+.section-icon svg {
+  width: 8mm;
+  height: 8mm;
+  display: block;
 }
 
 .marker-light {
@@ -431,9 +452,11 @@ li + li {
   font-weight: 900;
 }
 
-.figure-placeholder {
+.result-figure {
+  width: 100%;
+  min-height: 100mm;
   margin: 2.6mm 0;
-  border: 0.65mm dashed var(--line);
+  border: 0.6mm solid var(--line);
   background:
     linear-gradient(90deg, rgba(8, 123, 131, 0.08) 1px, transparent 1px),
     linear-gradient(rgba(8, 123, 131, 0.08) 1px, transparent 1px),
@@ -444,6 +467,16 @@ li + li {
   justify-content: center;
   text-align: center;
   color: var(--navy);
+  overflow: hidden;
+}
+
+.result-figure img,
+.result-figure svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 120mm;
+  object-fit: contain;
 }
 
 .figure-primary {
@@ -454,13 +487,13 @@ li + li {
   aspect-ratio: 16 / 6.6;
 }
 
-.figure-placeholder strong {
+.result-figure strong {
   display: block;
   font-size: 21pt;
   margin-bottom: 1mm;
 }
 
-.figure-placeholder span {
+.result-figure span {
   display: block;
   font-size: 15.5pt;
   line-height: 1.18;
@@ -603,10 +636,15 @@ li + li {
   font-size: 21pt;
 }
 
-.compact-heading .section-marker {
+.compact-heading .section-icon {
   width: 8mm;
   height: 8mm;
-  font-size: 12pt;
+  flex-basis: 8mm;
+}
+
+.compact-heading .section-icon svg {
+  width: 5mm;
+  height: 5mm;
 }
 
 .references-list {
@@ -723,12 +761,13 @@ li + li {
 @media print {
   html,
   body {
-    width: 841mm;
-    height: 1189mm;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: var(--paper);
+    width: 841mm !important;
+    height: 1189mm !important;
+    min-width: 841mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
   }
 
   .screen-only,
@@ -737,14 +776,17 @@ li + li {
   }
 
   .poster {
-    width: 841mm;
-    height: 1189mm;
-    margin: 0;
-    overflow: hidden;
+    width: 841mm !important;
+    height: 1189mm !important;
+    min-width: 841mm !important;
+    min-height: 1189mm !important;
+    margin: 0 !important;
+    overflow: hidden !important;
     box-shadow: none;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    page-break-inside: avoid;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
     break-inside: avoid;
   }
 
@@ -754,11 +796,16 @@ li + li {
   .section-block,
   .results-panel,
   .finding,
-  .figure-placeholder,
+  .result-figure,
   .references-contact,
   .references,
   .contact-card,
   .institutional-footer,
+  figure,
+  table,
+  .method-box,
+  .result-block,
+  .reference-item,
   table,
   tr,
   td,

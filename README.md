@@ -20,11 +20,10 @@ Open `index.html` directly in Google Chrome.
 
 Edit the text directly in `index.html`. Clearly labelled placeholders are included for missing information, including:
 
-- author email
-- optional conference location/date
-- thesis or project URL
-- verified AI-exposure coefficients and p-values
-- complete reference details
+- University of Zurich logo
+- IAFPA 2026 logo
+- QR code
+- verified thesis figure images
 
 ## Replace figures and logos
 
@@ -35,10 +34,6 @@ Search `index.html` for `REPLACE` comments. These comments mark the exact locati
 - QR code
 - Figure 1
 - Figure 2
-- Figure 3
-- author email
-- complete reference information
-- verified AI-exposure coefficients and p-values
 
 For images, insert an `<img>` element inside the marked placeholder, for example:
 
@@ -50,16 +45,17 @@ SVG is recommended for charts and logos. PNG also works if the resolution is hig
 
 ## Export to PDF in Chrome
 
-1. Open `index.html` in Chrome.
-2. Click **Print / Save as PDF**, or press `Ctrl+P`.
-3. Destination: **Save to PDF**.
-4. Paper size: **A0**.
-5. Orientation: **Portrait**.
-6. Scale: **100%**.
-7. Margins: **None**.
-8. Enable **Background graphics**.
-9. Disable **Headers and footers**.
-10. Save the PDF.
+1. Open the final poster in Chrome.
+2. Select Print.
+3. Destination: Save as PDF.
+4. Paper size: A0.
+5. Orientation: Portrait.
+6. Margins: None.
+7. Scale: 100%.
+8. Enable Background graphics.
+9. Disable Headers and footers.
+10. Confirm that the preview shows exactly one page.
+11. Do not save the PDF if the preview shows A4 or more than one page.
 
 ## Final PDF check
 
