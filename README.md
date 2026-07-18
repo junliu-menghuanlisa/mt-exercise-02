@@ -1,62 +1,68 @@
-# MT Exercise 2: Pytorch RNN Language Models
+# IAFPA 2026 Academic Poster
 
-This repo shows how to train neural language models using [Pytorch example code](https://github.com/pytorch/examples/tree/master/word_language_model). Thanks to Emma van den Bold, the original author of these scripts. 
+This folder contains a single-page A0 portrait academic conference poster for:
 
-# Requirements
+**“AI-ccent Judgements: Accent Stereotypes Persist with AI-Generated Voices”**  
+Jun Liu, Department of Computational Linguistics, University of Zurich
 
-- This only works on a Unix-like system, with bash.
-- Python 3 must be installed on your system, i.e. the command `python3` must be available
-- Make sure virtualenv is installed on your system. To install, e.g.
+## Files
 
-    `pip install virtualenv`
+- `index.html` — complete editable poster content
+- `styles.css` — screen and print styling for A0 portrait export
 
-# Steps
+No build system, package manager, external CSS framework, external font, or JavaScript framework is required.
 
-Clone this repository in the desired place:
+## Open locally
 
-    git clone https://github.com/marcamsler1/mt-exercise-02
-    cd mt-exercise-02
+Open `index.html` directly in Google Chrome.
 
-Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
+## Edit content
 
-    ./scripts/make_virtualenv.sh
+Edit the text directly in `index.html`. Clearly labelled placeholders are included for missing information, including:
 
-**Important**: Then activate the env by executing the `source` command that is output by the shell script above.
+- University of Zurich logo
+- IAFPA 2026 logo
+- QR code
+- verified thesis figure images
 
-Download and install required software:
+## Replace figures and logos
 
-    ./scripts/install_packages.sh
+Search `index.html` for `REPLACE` comments. These comments mark the exact locations for:
 
-Download and preprocess data:
+- University of Zurich logo
+- IAFPA 2026 logo
+- QR code
+- Figure 1
+- Figure 2
 
-    ./scripts/download_data.sh
+For images, insert an `<img>` element inside the marked placeholder, for example:
 
-Train a model:
+```html
+<img src="figures/figure-1.svg" alt="Model-estimated ratings by accent type">
+```
 
-    ./scripts/train.sh
+SVG is recommended for charts and logos. PNG also works if the resolution is high enough for A0 printing.
 
-The training process can be interrupted at any time, and the best checkpoint will always be saved.
+## Export to PDF in Chrome
 
-Generate (sample) some text from a trained model with:
+1. Open the final poster in Chrome.
+2. Select Print.
+3. Destination: Save as PDF.
+4. Paper size: A0.
+5. Orientation: Portrait.
+6. Margins: None.
+7. Scale: 100%.
+8. Enable Background graphics.
+9. Disable Headers and footers.
+10. Confirm that the preview shows exactly one page.
+11. Do not save the PDF if the preview shows A4 or more than one page.
 
-    ./scripts/generate.sh
+## Final PDF check
 
----
-## exercise1 NLP Assignment Update: Custom Language Model Training
+Before submission, confirm that:
 
-### Project Overview
-I trained a recurrent neural network (LSTM) language model on a custom Chinese dataset: **"The Three-Body Problem" (三体)**.
-
-### Key Changes & Methodology
-- **Custom Tokenization**: Since Chinese doesn't use spaces, I used the `jieba` library to segment the text.
-- **Dataset Segmentation**: Split the novel into `train.txt`, `valid.txt`, and `test.txt` (80/10/10 ratio).
-- **Model Training**: 
-  - Architecture: 2-layer LSTM
-  - Epochs: 40
-  - Hyperparameters: emsize=200, nhid=200, dropout=0.5.
-
-### Findings
-- **Final Test Perplexity**: 273.95 (Significant improvement compared to 361.62 at Epoch 5).
-- **Generation Sample**: The model successfully captured keywords like "智子" (Sophon) and "维度" (Dimension), though global sentence logic remains a challenge for a model of this size.
-- ##exercise2
-- Evaluated dropout rates (0,0.1 0.2，0.3，0.4, 0.5). Found0.1 produced the lowest Test PPL (361.60).
+- the PDF contains exactly one page
+- the page size is exactly **841 mm × 1189 mm**
+- no content is clipped, overlapping, or spilling onto a second page
+- all placeholders have either been filled or intentionally left clearly labelled
+- all figures, logos, and the QR code are readable at A0 size
