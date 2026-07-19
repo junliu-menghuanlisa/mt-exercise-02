@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IAFPA 2026 A0 Poster - AI-ccent Judgements</title>
+  <style>
+    @page {
+      size: 841mm 1189mm;
+      margin: 0;
+    }
+
+    :root {
+      --uzh-blue: #0028a5;
+      --uzh-blue-dark: #001b6e;
+      --uzh-blue-soft: #eaf0ff;
+      --ink: #1c2430;
+      --muted: #596474;
+      --line: #cfd6e4;
+      --paper: #ffffff;
+      --wash: #f5f7fb;
+      --accent: #e75b2c;
+      --accent-soft: #fff0e9;
+      --ok: #1b7f58;
+      --grey: #8a94a6;
+      --poster-w: 841mm;
+      --poster-h: 1189mm;
+      --safe: 27mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #d8dde8;
+      color: var(--ink);
+      font-family: Inter, "Source Han Sans", "Noto Sans CJK SC", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      overflow: auto;
+    }
+
+    .screen-note {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 10px 18px;
+      background: #101827;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.35;
+      letter-spacing: .01em;
+    }
+
+    .preview-shell {
+      width: 330mm;
+      min-height: 398mm;
+      padding: 30px;
+      transform-origin: top left;
+    }
+
+    .poster {
+      width: var(--poster-w);
+      height: var(--poster-h);
+      padding: var(--safe);
+      background: var(--paper);
+      box-shadow: 0 18px 60px rgba(7, 15, 35, .35);
+      transform: scale(.31);
+      transform-origin: top left;
+      display: grid;
+      grid-template-rows: 112mm 42mm 887mm 70mm;
+      gap: 8mm;
+      overflow: hidden;
+    }
+
+    header.poster-header {
+      display: grid;
+      grid-template-columns: 74mm 1fr 74mm;
+      gap: 12mm;
+      align-items: center;
+      border-bottom: 2.2mm solid var(--uzh-blue);
+      padding-bottom: 7mm;
+    }
+
+    .logo-box {
+      height: 58mm;
+      border: 1.2mm dashed #8ea0c2;
+      border-radius: 4mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--uzh-blue);
+      font-size: 18pt;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-align: center;
+      background: #fbfcff;
+    }
+
+    .logo-box small {
+      margin-top: 2mm;
+      color: var(--muted);
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: .02em;
+      line-height: 1.2;
+    }
+
+    .title-block {
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 0 0 5mm;
+      color: var(--uzh-blue-dark);
+      font-size: 56pt;
+      line-height: .98;
+      letter-spacing: -1.8pt;
+      font-weight: 900;
+    }
+
+    .meta {
+      font-size: 18pt;
+      line-height: 1.25;
+      color: var(--ink);
+      font-weight: 650;
+    }
+
+    .conference {
+      margin-top: 3mm;
+      color: var(--muted);
+      font-size: 15pt;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .takeaway {
+      display: flex;
+      align-items: center;
+      padding: 0 17mm;
+      border-radius: 5mm;
+      background: linear-gradient(90deg, var(--accent), #f28a45);
+      color: #fff;
+      box-shadow: inset 0 -1mm 0 rgba(0, 0, 0, .12);
+      font-size: 23pt;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .takeaway strong {
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-right: 4mm;
+    }
+
+    main.columns {
+      display: grid;
+      grid-template-columns: 25fr 47fr 28fr;
+      gap: 8mm;
+      min-height: 0;
+    }
+
+    .column {
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5mm;
+    }
+
+    .column + .column {
+      border-left: .65mm solid var(--line);
+      padding-left: 8mm;
+    }
+
+    section.card {
+      border: .6mm solid var(--line);
+      border-radius: 4mm;
+      background: #fff;
+      padding: 4.2mm 4.8mm;
+      break-inside: avoid;
+    }
+
+    section.card.tint {
+      background: var(--wash);
+    }
+
+    section.card.accent-card {
+      border-color: #f2ad8a;
+      background: var(--accent-soft);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      margin: 0 0 3.1mm;
+      color: var(--uzh-blue-dark);
+      font-size: 18.4pt;
+      line-height: 1.05;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .045em;
+    }
+
+    .section-title::before {
+      content: "";
+      flex: 0 0 3.2mm;
+      width: 3.2mm;
+      height: 11mm;
+      border-radius: 2mm;
+      background: var(--accent);
+    }
+
+    p {
+      margin: 0 0 2.2mm;
+      font-size: 12.8pt;
+      line-height: 1.31;
+    }
+
+    .center p,
+    .right p {
+      font-size: 13.4pt;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 5.2mm;
+    }
+
+    li {
+      margin: 0 0 1.45mm;
+      font-size: 12.35pt;
+      line-height: 1.26;
+    }
+
+    .right li {
+      font-size: 12.8pt;
+      line-height: 1.28;
+    }
+
+    .small li,
+    .small p {
+      font-size: 10.4pt;
+      line-height: 1.23;
+    }
+
+    .note-box {
+      margin-top: 2.3mm;
+      padding: 3mm;
+      border-left: 1.6mm solid var(--accent);
+      border-radius: 2mm;
+      background: var(--accent-soft);
+      color: #4a2517;
+    }
+
+    .note-box p {
+      font-size: 10.7pt;
+      margin: 0;
+    }
+
+    .callout {
+      padding: 3.4mm 4mm;
+      border-radius: 3.2mm;
+      background: var(--uzh-blue-soft);
+      border: .6mm solid #b9c8ec;
+      color: var(--uzh-blue-dark);
+      font-weight: 800;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 13pt;
+      line-height: 1.25;
+    }
+
+    .final-takeaway {
+      padding: 5mm;
+      border-radius: 4mm;
+      background: var(--uzh-blue-dark);
+      color: #fff;
+      font-size: 20pt;
+      line-height: 1.18;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .conclusion {
+      padding: 5mm;
+      border-radius: 4mm;
+      background: linear-gradient(135deg, var(--uzh-blue-soft), #fff);
+      border: .75mm solid #aebee6;
+    }
+
+    .conclusion p {
+      color: var(--uzh-blue-dark);
+      font-size: 13.6pt;
+      line-height: 1.3;
+      font-weight: 800;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.7pt;
+      line-height: 1.16;
+    }
+
+    th,
+    td {
+      padding: 1.65mm 1.7mm;
+      border-bottom: .35mm solid #dde3ef;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      color: var(--uzh-blue-dark);
+      background: #edf2ff;
+      font-weight: 850;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compact-table {
+      font-size: 8.8pt;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .figure-card {
+      border: .7mm solid #bcc8dc;
+      border-radius: 4.5mm;
+      padding: 4.5mm 5mm;
+      background: #fff;
+      break-inside: avoid;
+    }
+
+    .figure-card.major {
+      border-width: .9mm;
+      border-color: #99abd0;
+      box-shadow: 0 2mm 7mm rgba(0, 40, 165, .08);
+    }
+
+    .figure-title {
+      margin: 0 0 2mm;
+      color: var(--uzh-blue-dark);
+      font-size: 18pt;
+      line-height: 1.08;
+      font-weight: 900;
+    }
+
+    .figure-key {
+      margin: 0 0 2.6mm;
+      color: var(--ink);
+      font-size: 12.4pt;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .caption {
+      margin-top: 1.6mm;
+      color: var(--muted);
+      font-size: 9.2pt;
+      line-height: 1.25;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sig {
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 0 1.2mm 1.2mm 0;
+      padding: 1mm 2mm;
+      border-radius: 99px;
+      background: var(--uzh-blue-soft);
+      color: var(--uzh-blue-dark);
+      font-size: 9.5pt;
+      font-weight: 800;
+    }
+
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3mm;
+      margin-top: 2mm;
+    }
+
+    .stat-box {
+      padding: 3mm;
+      border-radius: 3mm;
+      background: var(--wash);
+      border: .45mm solid #dce3ef;
+      text-align: center;
+    }
+
+    .stat-box b {
+      display: block;
+      color: var(--uzh-blue-dark);
+      font-size: 19pt;
+      line-height: 1;
+    }
+
+    .stat-box span {
+      display: block;
+      margin-top: 1mm;
+      color: var(--muted);
+      font-size: 8.3pt;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    footer.poster-footer {
+      display: grid;
+      grid-template-columns: 1fr 39mm;
+      gap: 8mm;
+      border-top: 1.8mm solid var(--uzh-blue);
+      padding-top: 5mm;
+      min-height: 0;
+    }
+
+    .references h2,
+    .contact h2 {
+      margin: 0 0 2mm;
+      color: var(--uzh-blue-dark);
+      font-size: 13pt;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .references ul {
+      columns: 2;
+      column-gap: 8mm;
+      padding-left: 4.4mm;
+    }
+
+    .references li,
+    .contact p {
+      font-size: 7.9pt;
+      line-height: 1.18;
+      margin-bottom: 1mm;
+    }
+
+    .qr-box {
+      width: 39mm;
+      height: 39mm;
+      border: .9mm dashed #8ea0c2;
+      border-radius: 3mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      font-size: 8.5pt;
+      line-height: 1.2;
+      font-weight: 800;
+      padding: 3mm;
+    }
+
+    .footer-meta {
+      margin-top: 2mm;
+      color: var(--muted);
+      font-size: 8.4pt;
+      line-height: 1.25;
+    }
+
+    @media print {
+      html,
+      body {
+        width: 841mm;
+        height: 1189mm;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .screen-note {
+        display: none;
+      }
+
+      .preview-shell {
+        width: 841mm;
+        height: 1189mm;
+        padding: 0;
+      }
+
+      .poster {
+        width: 841mm;
+        height: 1189mm;
+        transform: none;
+        box-shadow: none;
+      }
+
+      * {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen-note">
+    Screen preview is scaled for navigation. For PDF export, print at 100%, disable browser headers/footers, set paper size to A0 portrait, and enable background graphics.
+  </div>
+  <div class="preview-shell">
+    <article class="poster" aria-label="IAFPA 2026 A0 academic poster">
+      <header class="poster-header">
+        <div class="logo-box">LOGO<small>University of Zurich<br>official logo placeholder</small></div>
+        <div class="title-block">
+          <h1>AI-ccent Judgements: Accent Stereotypes Persist with AI-Generated Voices</h1>
+          <div class="meta">Jun Liu · Department of Computational Linguistics, University of Zurich · jun.liu@uzh.ch</div>
+          <div class="conference">IAFPA Conference 2026 · 26–29 July · Trier, Germany</div>
+        </div>
+        <div class="logo-box">LOGO<small>IAFPA 2026<br>official logo placeholder</small></div>
+      </header>
+
+      <div class="takeaway"><strong>Takeaway:</strong> Listeners evaluate AI-generated voices not only through acoustic realism, but also through sociolinguistic meanings attached to accent.</div>
+
+      <main class="columns">
+        <div class="column left">
+          <section class="card">
+            <h2 class="section-title">Background and research gap</h2>
+            <p>AI-generated voices are increasingly realistic but are not necessarily perceived as socially neutral. In human speech, listeners use accent to infer identity, credibility, competence, and social character. Accent stereotypes may also shape judgements of speaker traits and behaviour in forensic contexts (Paver et al., 2025), while increasingly realistic synthetic speech creates challenges involving deception, impersonation, fraud, and audio-deepfake detection (Almutairi &amp; Elgibreen, 2022).</p>
+            <div class="note-box"><p><strong>Research gap:</strong> Little is known about how accent, perceived voice gender, and listener background jointly shape social evaluations of voices that listeners know are AI-generated.</p></div>
+            <div class="note-box"><p><strong>Scope caution:</strong> The experiment examined social evaluations of AI-generated voices. It did not directly test forensic evidence evaluation, legal decision-making, transcription accuracy, speaker identification, or deepfake-detection accuracy.</p></div>
+          </section>
+
+          <section class="card tint">
+            <h2 class="section-title">Research questions</h2>
+            <ol>
+              <li><strong>RQ1 — Accent type:</strong> How does accent type (standard vs. regional) influence ratings of trustworthiness, professionalism, and human-likeness in AI-generated voices?</li>
+              <li><strong>RQ2 — Voice gender:</strong> Does perceived voice gender influence ratings of trustworthiness and professionalism? Exploratorily, does it influence human-likeness?</li>
+              <li><strong>RQ3 — Listener and accent nationality:</strong> Does the relationship between accent nationality and listener nationality influence ratings of trustworthiness, professionalism, and human-likeness?</li>
+            </ol>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Participants</h2>
+            <ul>
+              <li>Final analysed sample: 40 participants — 20 British listeners and 20 American listeners.</li>
+              <li>All reported English as their first language and normal hearing.</li>
+              <li>Age range: 21–40 years; M = 31.80, SD = 5.43.</li>
+              <li>Gender: 21 female, 18 male, 1 preferred not to report.</li>
+              <li>All included participants passed the headphone screening and attention checks.</li>
+              <li>Study duration ≈ 20 minutes; compensation £3.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Mixed design</h2>
+            <table>
+              <thead><tr><th>Role</th><th>Variable</th><th>Levels</th></tr></thead>
+              <tbody>
+                <tr><td>Within participants</td><td>Accent type</td><td>Standard / Regional</td></tr>
+                <tr><td>Within participants</td><td>Accent nationality</td><td>British / American</td></tr>
+                <tr><td>Within participants</td><td>Perceived voice gender</td><td>Female / Male</td></tr>
+                <tr><td>Between participants</td><td>Listener nationality</td><td>British / American</td></tr>
+                <tr><td>Primary outcomes</td><td>Ratings</td><td>Trustworthiness / Professionalism / Human-likeness</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Accent design matrix</h2>
+            <table>
+              <thead><tr><th>Accent nationality</th><th>Standard</th><th>Regional</th></tr></thead>
+              <tbody>
+                <tr><td>British</td><td>Received Pronunciation (RP)</td><td>Yorkshire</td></tr>
+                <tr><td>American</td><td>General American (GA)</td><td>Southern American (SA)</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="card tint small">
+            <h2 class="section-title">Stimuli, measures and procedure</h2>
+            <p><span class="pill">voices</span><span class="pill">ratings</span><span class="pill">procedure</span></p>
+            <ul>
+              <li>16 unique ElevenLabs voices and 64 clips in total.</li>
+              <li>Within each of the four accent varieties, two male and two female voices.</li>
+              <li>Each voice produced four utterances; each participant rated all 64 clips.</li>
+              <li>Same four utterances across all conditions: two from <em>Comma Gets a Cure</em>, two from <em>The North Wind and the Sun</em>.</li>
+              <li>ElevenLabs settings: Stability 60%, Similarity Enhancement 75%, Speech Speed 1.0.</li>
+              <li>Audio: MP3, 44.1 kHz, 128 kbps; normalised to −23 LUFS.</li>
+              <li>Four separate 6-point ratings: trustworthiness, professionalism, human-likeness, perceived audio naturalness (no neutral midpoint; higher = more positive).</li>
+              <li>Procedure: consent &amp; background questionnaire → headphone screening (6 trials, ≥5 correct, 1 retry allowed) → main task (64 clips, randomised order, up to 3 plays each) → 4 ratings per clip + attention checks every 6 clips → post-task quality checks + optional open-ended questions.</li>
+            </ul>
+            <div class="note-box"><p><strong>Analytical dataset:</strong> 40 participants × 64 clips = <strong>2,560 observations</strong>, no missing values on analysis variables.</p></div>
+          </section>
+
+          <section class="card small">
+            <h2 class="section-title">Statistical analysis</h2>
+            <p>Ratings were rescaled from the original 1–6 scale to the open interval (0,1) and analysed using beta mixed-effects regression. Participant and audio file were included as crossed random intercepts; estimates are reported on the logit scale.</p>
+            <ul>
+              <li>Main-model fixed effects: accent type, perceived voice gender, listener nationality, accent nationality, and listener nationality × accent nationality.</li>
+              <li>AI exposure robustness models: standardised self-reported AI exposure added as covariate.</li>
+              <li>Perceived-audio-naturalness models: standardised perceived audio naturalness added as predictor, retaining main fixed/random structure.</li>
+            </ul>
+            <div class="note-box"><p><strong>Interpretation rule:</strong> Do not compare regression estimates directly with raw 1–6 means. Regression estimates are on the logit scale; descriptive/estimated marginal means are on the original rating scale only where explicitly stated.</p></div>
+          </section>
+        </div>
+
+        <div class="column center">
+          <section class="card">
+            <h2 class="section-title">Overall descriptive ratings</h2>
+            <p class="muted">Raw 1–6 scale; higher = more positive.</p>
+            <table>
+              <thead><tr><th>Measure</th><th>Mean</th><th>SD</th><th>Min</th><th>Max</th></tr></thead>
+              <tbody>
+                <tr><td>Trustworthiness</td><td>4.14</td><td>1.25</td><td>1</td><td>6</td></tr>
+                <tr><td>Professionalism</td><td>4.25</td><td>1.23</td><td>1</td><td>6</td></tr>
+                <tr><td>Human-likeness</td><td>4.06</td><td>1.55</td><td>1</td><td>6</td></tr>
+                <tr><td>Perceived audio naturalness</td><td>3.94</td><td>1.55</td><td>1</td><td>6</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="figure-card major">
+            <h2 class="figure-title">Figure 1 — Accent type × three outcomes</h2>
+            <p class="figure-key">Key finding: Regional accents were rated significantly higher than standard accents for trustworthiness and human-likeness, but not professionalism.</p>
+            <svg viewBox="0 0 640 260" role="img" aria-label="Forest plot of regional minus standard accent effects">
+              <rect x="0" y="0" width="640" height="260" fill="#fff"></rect>
+              <line x1="240" y1="34" x2="240" y2="205" stroke="#596474" stroke-width="2" stroke-dasharray="5 5"></line>
+              <line x1="100" y1="205" x2="590" y2="205" stroke="#1c2430" stroke-width="2"></line>
+              <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#596474" text-anchor="middle">
+                <text x="100" y="228">−0.30</text>
+                <text x="170" y="228">−0.15</text>
+                <text x="240" y="228">0</text>
+                <text x="310" y="228">0.15</text>
+                <text x="380" y="228">0.30</text>
+                <text x="450" y="228">0.45</text>
+                <text x="520" y="228">0.60</text>
+                <text x="590" y="228">0.75</text>
+              </g>
+              <g stroke="#d7deeb" stroke-width="1">
+                <line x1="100" y1="34" x2="100" y2="205"></line>
+                <line x1="170" y1="34" x2="170" y2="205"></line>
+                <line x1="310" y1="34" x2="310" y2="205"></line>
+                <line x1="380" y1="34" x2="380" y2="205"></line>
+                <line x1="450" y1="34" x2="450" y2="205"></line>
+                <line x1="520" y1="34" x2="520" y2="205"></line>
+                <line x1="590" y1="34" x2="590" y2="205"></line>
+              </g>
+              <g font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#1c2430">
+                <text x="20" y="62">Trustworthiness</text>
+                <text x="20" y="118">Professionalism</text>
+                <text x="20" y="174">Human-likeness</text>
+              </g>
+              <g stroke-linecap="round">
+                <line x1="265.7" y1="58" x2="416.9" y2="58" stroke="#e75b2c" stroke-width="6"></line>
+                <circle cx="341.3" cy="58" r="9" fill="#e75b2c"></circle>
+                <line x1="141.1" y1="114" x2="284.8" y2="114" stroke="#8a94a6" stroke-width="6"></line>
+                <circle cx="212.9" cy="114" r="9" fill="#8a94a6"></circle>
+                <line x1="349.8" y1="170" x2="572.3" y2="170" stroke="#e75b2c" stroke-width="6"></line>
+                <circle cx="461.2" cy="170" r="9" fill="#e75b2c"></circle>
+              </g>
+              <g font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">
+                <text x="426" y="63" fill="#e75b2c">0.217 **</text>
+                <text x="292" y="119" fill="#596474">−0.058</text>
+                <text x="480" y="159" fill="#e75b2c">0.474 ***</text>
+              </g>
+              <text x="332" y="252" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#1c2430">Estimate, Regional − Standard (logit scale)</text>
+            </svg>
+            <div class="caption">Beta mixed-effects regression estimates on the logit scale. Error bars show 95% CI: Trustworthiness [0.055, 0.379], Professionalism [−0.212, 0.096], Human-likeness [0.235, 0.712]. Significance: * p&lt;.05, ** p&lt;.01, *** p&lt;.001.</div>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Accent-variety estimated marginal means</h2>
+            <p class="muted">Estimated marginal means on the original 1–6 scale.</p>
+            <table>
+              <thead><tr><th>Outcome</th><th>General American</th><th>Southern American</th><th>RP</th><th>Yorkshire</th></tr></thead>
+              <tbody>
+                <tr><td>Trustworthiness</td><td>3.83</td><td>4.28</td><td>4.43</td><td>4.49</td></tr>
+                <tr><td>Professionalism</td><td>4.21</td><td>4.38</td><td>4.73</td><td>4.46</td></tr>
+                <tr><td>Human-likeness</td><td>3.46</td><td>4.32</td><td>4.25</td><td>4.50</td></tr>
+              </tbody>
+            </table>
+            <div class="stat-strip">
+              <div class="stat-box"><b>3.83</b><span>GA trustworthiness; significantly lower than the other three varieties</span></div>
+              <div class="stat-box"><b>4.73</b><span>RP highest estimated professionalism mean</span></div>
+              <div class="stat-box"><b>4.50</b><span>Yorkshire highest estimated human-likeness mean</span></div>
+              <div class="stat-box"><b>1–6</b><span>Means shown on original rating scale only</span></div>
+            </div>
+          </section>
+
+          <section class="figure-card major">
+            <h2 class="figure-title">Figure 2 — Listener nationality × accent nationality interaction</h2>
+            <p class="figure-key">Poster-ready interpretation: Both listener groups rated British-accented voices as more trustworthy and professional than American-accented voices. For human-likeness, British listeners showed a British-accent advantage, whereas American listeners showed no significant difference. The results therefore did not support a symmetrical own-accent preference.</p>
+            <svg viewBox="0 0 660 318" role="img" aria-label="Grouped bar chart of British-accented minus American-accented voices by listener group">
+              <rect x="0" y="0" width="660" height="318" fill="#fff"></rect>
+              <g transform="translate(70,24)">
+                <line x1="0" y1="220" x2="540" y2="220" stroke="#1c2430" stroke-width="2"></line>
+                <line x1="0" y1="220" x2="0" y2="10" stroke="#1c2430" stroke-width="2"></line>
+                <g stroke="#d7deeb" stroke-width="1">
+                  <line x1="0" y1="173.3" x2="540" y2="173.3"></line>
+                  <line x1="0" y1="126.7" x2="540" y2="126.7"></line>
+                  <line x1="0" y1="80" x2="540" y2="80"></line>
+                  <line x1="0" y1="33.3" x2="540" y2="33.3"></line>
+                </g>
+                <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#596474" text-anchor="end">
+                  <text x="-9" y="224">0</text>
+                  <text x="-9" y="177.3">0.2</text>
+                  <text x="-9" y="130.7">0.4</text>
+                  <text x="-9" y="84">0.6</text>
+                  <text x="-9" y="37.3">0.8</text>
+                </g>
+                <g>
+                  <rect x="44" y="127.8" width="34" height="92.2" fill="#0028a5"></rect>
+                  <rect x="83" y="147.7" width="34" height="72.3" fill="#e75b2c"></rect>
+                  <line x1="61" y1="85.4" x2="61" y2="170.3" stroke="#1c2430" stroke-width="3"></line>
+                  <line x1="100" y1="105.2" x2="100" y2="190.1" stroke="#1c2430" stroke-width="3"></line>
+                  <text x="54" y="78" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#e75b2c">***</text>
+                  <text x="93" y="98" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#e75b2c">***</text>
+                  <rect x="218" y="165.9" width="34" height="54.1" fill="#0028a5"></rect>
+                  <rect x="257" y="142.8" width="34" height="77.2" fill="#e75b2c"></rect>
+                  <line x1="235" y1="125" x2="235" y2="206.7" stroke="#1c2430" stroke-width="3"></line>
+                  <line x1="274" y1="101.7" x2="274" y2="183.6" stroke="#1c2430" stroke-width="3"></line>
+                  <text x="228" y="118" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#e75b2c">**</text>
+                  <text x="267" y="94" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#e75b2c">***</text>
+                  <rect x="392" y="70.9" width="34" height="149.1" fill="#0028a5"></rect>
+                  <rect x="431" y="177.5" width="34" height="42.5" fill="#e75b2c"></rect>
+                  <line x1="409" y1="11.4" x2="409" y2="130.4" stroke="#1c2430" stroke-width="3"></line>
+                  <line x1="448" y1="118" x2="448" y2="236.8" stroke="#1c2430" stroke-width="3"></line>
+                  <text x="402" y="18" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#e75b2c">***</text>
+                  <text x="440" y="112" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#596474">ns</text>
+                </g>
+                <g font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#1c2430" text-anchor="middle">
+                  <text x="80" y="248">Trustworthiness</text>
+                  <text x="254" y="248">Professionalism</text>
+                  <text x="428" y="248">Human-likeness</text>
+                </g>
+                <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#1c2430">
+                  <rect x="408" y="268" width="15" height="15" fill="#0028a5"></rect>
+                  <text x="429" y="281">British listeners</text>
+                  <rect x="408" y="288" width="15" height="15" fill="#e75b2c"></rect>
+                  <text x="429" y="301">American listeners</text>
+                </g>
+              </g>
+              <text x="16" y="155" transform="rotate(-90 16 155)" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#1c2430" text-anchor="middle">Estimate, British-accented − American-accented (logit scale)</text>
+            </svg>
+            <div class="caption">Simple effects from beta mixed-effects regression on the logit scale. Error bars show 95% CI. Interaction terms: Trustworthiness b = −0.021, p = .314; Professionalism b = 0.025, p = .243; Human-likeness b = −0.114, p &lt; .001.</div>
+          </section>
+
+          <section class="card accent-card">
+            <h2 class="section-title">Voice-gender null result</h2>
+            <p><strong>Null result:</strong> Perceived voice gender did not significantly predict trustworthiness, professionalism, or human-likeness in the main models.</p>
+            <table class="compact-table">
+              <thead><tr><th>Outcome</th><th>Contrast</th><th>Estimate</th><th>SE</th><th>z</th><th>p</th><th>95% CI</th></tr></thead>
+              <tbody>
+                <tr><td>Trustworthiness</td><td>Female − Male</td><td>−0.019</td><td>0.083</td><td>−0.23</td><td>.815</td><td>[−0.181, 0.143]</td></tr>
+                <tr><td>Professionalism</td><td>Female − Male</td><td>−0.106</td><td>0.079</td><td>−1.35</td><td>.177</td><td>[−0.260, 0.048]</td></tr>
+                <tr><td>Human-likeness</td><td>Female − Male</td><td>0.060</td><td>0.121</td><td>0.49</td><td>.622</td><td>[−0.178, 0.298]</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <div class="column right">
+          <section class="card">
+            <h2 class="section-title">Supplementary analysis 1 — Self-reported AI exposure</h2>
+            <p>Standardised self-reported AI exposure significantly and positively predicted all three outcomes. Participants reporting greater AI exposure tended to give more positive ratings, but adding AI exposure did not materially alter the main pattern of accent, voice-gender, or accent-nationality results.</p>
+            <table class="compact-table">
+              <thead><tr><th>Outcome</th><th>Estimate</th><th>SE</th><th>z</th><th>p</th><th>95% CI</th></tr></thead>
+              <tbody>
+                <tr><td>Trustworthiness</td><td>0.315</td><td>0.151</td><td>2.09</td><td>.037</td><td>[0.019, 0.611]</td></tr>
+                <tr><td>Professionalism</td><td>0.337</td><td>0.142</td><td>2.38</td><td>.017</td><td>[0.059, 0.615]</td></tr>
+                <tr><td>Human-likeness</td><td>0.328</td><td>0.152</td><td>2.16</td><td>.031</td><td>[0.031, 0.625]</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="card accent-card">
+            <h2 class="section-title">Supplementary analysis 2 — Perceived audio naturalness</h2>
+            <p><strong>Key supplementary finding:</strong> Perceived audio naturalness significantly and positively predicted all three outcomes, most strongly human-likeness.</p>
+            <table class="compact-table">
+              <thead><tr><th>Outcome</th><th>Estimate</th><th>SE</th><th>z</th><th>p</th></tr></thead>
+              <tbody>
+                <tr><td>Trustworthiness</td><td>1.037</td><td>0.025</td><td>42.04</td><td>&lt; .001</td></tr>
+                <tr><td>Professionalism</td><td>0.776</td><td>0.028</td><td>28.02</td><td>&lt; .001</td></tr>
+                <tr><td>Human-likeness</td><td>1.578</td><td>0.028</td><td>56.69</td><td>&lt; .001</td></tr>
+              </tbody>
+            </table>
+            <div class="note-box"><p><strong>Causal caution:</strong> Perceived audio naturalness was measured, not manipulated. The coefficients show associations and should not be described as causal effects or mediation.</p></div>
+            <p class="small"><strong>Sensitivity-model changes:</strong> After naturalness was included, the regional advantage for trustworthiness was no longer significant; the human-likeness regional advantage remained but was reduced; standard accents were rated significantly higher for professionalism; and female voices were rated significantly higher for human-likeness. These changes require cautious interpretation and are secondary to the preregistered/main model pattern.</p>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Discussion and implications</h2>
+            <ul>
+              <li>Synthetic voices were not evaluated as socially neutral: listeners continued to respond to accent-based social meanings even when they knew that the voices were AI-generated.</li>
+              <li>The effects were dimension-specific. Regional accents showed advantages for trustworthiness and human-likeness, but accent type did not significantly predict professionalism in the main model.</li>
+              <li>Perceived voice gender was a comparatively weak cue in this disembodied AI-voice context.</li>
+              <li>Human-likeness emerged as a distinct evaluative construct: strongest accent-type effect, only significant listener-nationality × accent-nationality interaction in the main models, and strongest association with perceived audio naturalness.</li>
+              <li>There was no symmetrical own-accent preference. British-accented voices showed a broader advantage for trustworthiness and professionalism across both listener groups.</li>
+            </ul>
+          </section>
+
+          <section class="card tint">
+            <h2 class="section-title">Practical implications</h2>
+            <ul>
+              <li>There is no single voice profile that simultaneously optimises trustworthiness, professionalism, and human-likeness.</li>
+              <li>Standard accents should not automatically be treated as neutral, safe, or superior defaults.</li>
+              <li>AI voice selection and localisation should be empirically tested with intended listener groups and evaluated across multiple social dimensions.</li>
+              <li>AI voice systems may reproduce existing sociolinguistic hierarchies if they privilege a narrow set of prestige-associated voices.</li>
+              <li>Perceived audio naturalness should be measured explicitly, while remaining conceptually distinct from human-likeness.</li>
+            </ul>
+          </section>
+
+          <section class="card small">
+            <h2 class="section-title">Forensic relevance — cautious framing</h2>
+            <p>Accent stereotypes can shape perceptions of speaker traits and behaviour in forensic contexts (Paver et al., 2025). Increasingly realistic synthetic voices also create challenges for impersonation and audio-deepfake detection (Almutairi &amp; Elgibreen, 2022). The present findings suggest that judgements of synthetic-voice credibility, authenticity, and humanness may reflect sociolinguistic expectations as well as perceived audio quality.</p>
+            <div class="note-box"><p><strong>Do not overclaim:</strong> This experiment did not directly investigate courts, police transcripts, juror decisions, speaker identification, forensic transcription, or deepfake-detection accuracy.</p></div>
+          </section>
+
+          <section class="card small">
+            <h2 class="section-title">Limitations</h2>
+            <ul>
+              <li>The between-participant sample was modest: 40 listeners, 20 in each nationality group.</li>
+              <li>Only British and American native-English listeners were included; generalisability to other national, linguistic, and L2 groups is limited.</li>
+              <li>Only four accent varieties were tested, all voices from one TTS platform.</li>
+              <li>Accent and perceived voice gender may have been partly confounded with voice-specific acoustic properties.</li>
+              <li>Each evaluative construct was measured with a single 6-point item.</li>
+              <li>Participants evaluated brief clips without an interactive, role-based, or forensic context.</li>
+            </ul>
+          </section>
+
+          <section class="conclusion">
+            <h2 class="section-title">Conclusion</h2>
+            <p>AI-generated voices are not socially neutral. Regional accents were perceived as more trustworthy and human-like, while British-accented voices received broader advantages in trustworthiness and professionalism. AI-voice evaluation is shaped by sociolinguistic meaning, listener background, self-reported AI exposure, and perceived audio naturalness.</p>
+          </section>
+
+          <div class="final-takeaway">Accent stereotypes persist — even when the voice is artificial.</div>
+        </div>
+      </main>
+
+      <footer class="poster-footer">
+        <div>
+          <div class="references">
+            <h2>Key references</h2>
+            <ul>
+              <li>Almutairi, M., &amp; Elgibreen, H. (2022). A review of modern audio deepfake detection methods: Challenges and future directions. <em>Applied Sciences</em>, 12(7), 3241.</li>
+              <li>Coupland, N., &amp; Bishop, H. (2007). Ideologised values for British accents. <em>Journal of Sociolinguistics</em>, 11(1), 74–93.</li>
+              <li>Nussbaum, C., Frühholz, S., &amp; Schweinberger, S. R. (2025). Understanding voice naturalness. <em>Trends in Cognitive Sciences</em>, 29(5), 467–480.</li>
+              <li>Paver, A., Wright, D., Braber, N., &amp; Pautz, N. (2025). Stereotyped accent judgements in forensic contexts: Listener perceptions of social traits and types of behaviour. <em>Frontiers in Communication</em>, 9, 1462013.</li>
+              <li>Additional references can be added in an appendix or supplementary handout if space permits.</li>
+            </ul>
+          </div>
+          <div class="footer-meta">Contact: Jun Liu · jun.liu@uzh.ch · Department of Computational Linguistics, University of Zurich · A0 portrait poster, 841mm × 1189mm.</div>
+        </div>
+        <div class="qr-box">QR code — full thesis / supplementary materials</div>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
