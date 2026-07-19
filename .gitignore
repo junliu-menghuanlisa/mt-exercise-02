@@ -1,0 +1,8 @@
+# Generated / downloaded during environment setup (not part of the repo)
+venvs/
+tools/
+data/
+models/
+samples/
+__pycache__/
+*.pyc
